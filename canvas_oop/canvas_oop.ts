@@ -141,8 +141,8 @@ rect5.y = 320;
 rect5.color = '#dce314'
 
 var text = new TextField();
-text.x = 400;
-text.y=350;
+text.x = 380;
+text.y=340;
 text.T="Play";
 
 var bitmap = new Bitmap();
