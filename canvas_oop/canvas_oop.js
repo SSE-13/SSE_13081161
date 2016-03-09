@@ -126,15 +126,15 @@ rect5.x = 500;
 rect5.y = 300;
 rect5.color = '#dce314';
 var text = new TextField();
-text.x = 10;
-text.y = 200;
+text.x = 200;
+text.y = 100;
 text.T = "Play";
 var bitmap = new Bitmap();
 bitmap.source = '13081161.png';
-bitmap.x = 400;
-bitmap.y = 200;
+bitmap.x = 200;
+bitmap.y = 10;
 //渲染队列
-var renderQueue = [rect, rect2, text, bitmap];
+var renderQueue = [rect, rect2, rect3, rect4, rect, rect2, text, bitmap];
 //资源加载列表
 var imageList = ['13081161.png'];
 //先加载资源，加载成功之后执行渲染队列
