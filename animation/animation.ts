@@ -35,7 +35,7 @@ var  Ticker=(function(){
         });
     };
     return Ticker;
-
+  }());
 var Body = (function () {
     function Body(displayObject) {
         this.vx = 0;
