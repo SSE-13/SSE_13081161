@@ -10,33 +10,31 @@ var F=-0.8;
 /**
  * 计时器系统
  */
-class Ticker {
-
-    bodyQueue = [];
-
-    lastTime;
-
+var  Ticker=(function(){
+    function Ticker() {
+    this.bodyQueue = [];
+    }
+  
     /**
      * 启动计时器
      * @param bodyList 物理队列
      */
-    start(bodyQueue) {
+    Ticker.prototype.start = function (bodyQueue) {
         this.bodyQueue = bodyQueue;
         this.lastTime = Date.now();
         var self = this;
         setInterval(this.onTicker.bind(this), 1000 / 60);
-    }
+    };
 
-    onTicker() {
+        Ticker.prototype.onTicker = function () {
         var currentTime = Date.now();
         var duringTime = currentTime - this.lastTime;
         this.lastTime = currentTime;
         this.bodyQueue.map(function(body) {
             body.onTicker(duringTime / 100)
         });
-    }
-}
-
+    };
+    return Ticker;
 
 var Body = (function () {
     function Body(displayObject) {
