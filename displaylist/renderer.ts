@@ -62,7 +62,7 @@ module render {
 
         }
     }
-    
+   
     function matrixoperation(M1: Matrix , M2: Matrix) {
         
         var m = new Matrix();
@@ -75,7 +75,6 @@ module render {
         return m;
         
     }
-
     export class DisplayObjectContainer extends DisplayObject {
 
 
